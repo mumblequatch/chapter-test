@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum: A Study in Placeholder Text</title>
+    <style>
+@import url('https://cdn.jsdelivr.net/gh/fonts-archive/Charter/Charter.css');
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next';
+    src: url(fonts/AtkinsonHyperlegibleNext-Regular.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next';
+    src: url(fonts/AtkinsonHyperlegibleNext-Bold.woff2) format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Next';
+    src: url(fonts/AtkinsonHyperlegibleNext-Italic.woff2) format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+* { box-sizing: border-box; }
+html { font-size: 18px; }
+
+@media (max-width: 600px) {
+    html { font-size: 22px; }
+}
+
+body {
+    font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: rgb(25, 25, 25);
+    background: rgb(247, 247, 247);
+    max-width: 38em;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Charter, Georgia, 'Times New Roman', serif;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 1.5em;
+    margin-bottom: 0.625em;
+}
+
+h1 { font-size: 1.6rem; color: rgb(51, 51, 51); }
+h2 { font-size: 1.35rem; color: rgb(51, 51, 51); }
+h3 { font-size: 1.15rem; font-weight: bold; color: rgb(51, 51, 51); }
+
+p { margin: 0 0 1em 0; }
+
+blockquote {
+    margin: 1em 0;
+    padding-left: 1.5em;
+    border-left: 3px solid rgb(200, 200, 200);
+    color: rgb(85, 85, 85);
+}
+
+ul, ol { margin: 1em 0; padding-left: 1.5em; }
+li { margin-bottom: 0.3em; }
+
+a { color: rgb(25, 25, 25); text-decoration: underline; }
+a:hover { color: rgb(26, 195, 255); }
+
+code {
+    font-family: 'SF Mono', Consolas, monospace;
+    font-size: 0.85em;
+    background: rgb(235, 235, 235);
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+}
+
+pre {
+    background: rgb(235, 235, 235);
+    padding: 1em;
+    overflow-x: auto;
+    border-radius: 3px;
+}
+
+pre code { background: none; padding: 0; }
+
+hr { border: none; border-top: 1px solid rgb(200, 200, 200); margin: 2em 0; }
+
+table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+th, td { border: 1px solid rgb(200, 200, 200); padding: 0.5em; text-align: left; }
+th { background: rgb(235, 235, 235); }
+
+img { max-width: 100%; height: auto; }
+
+.title-block {
+    text-align: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.title-block h1 { margin: 0 0 1.5em 0; font-size: 1.8rem; }
+.title-block .byline { font-size: 0.9rem; color: rgb(85, 85, 85); margin-bottom: 0.3em; }
+.title-block .author { font-size: 1.15rem; }
+
+#toc {
+    margin-top: 2em;
+    margin-bottom: 0;
+    padding-bottom: 2em;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+#toc-heading { margin-top: 0; font-size: 1.2rem; color: rgb(51, 51, 51); }
+#toc ol { padding-left: 1.5em; margin: 0; font-family: Charter, Georgia, 'Times New Roman', serif; }
+#toc li { margin-bottom: 0.5em; }
+#toc a { font-family: Charter, Georgia, 'Times New Roman', serif; color: rgb(25, 25, 25); text-decoration: none; }
+#toc a:hover { color: rgb(26, 195, 255); text-decoration: underline; }
+
+.chapter {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid rgb(220, 220, 220);
+    min-height: 80vh;
+}
+
+.chapter:last-of-type { border-bottom: none; }
+.chapter h2:first-child { margin-top: 0; }
+
+.back-to-top {
+    display: block;
+    margin-top: 2em;
+    font-size: 0.75rem;
+    color: rgb(153, 153, 153);
+    text-decoration: none;
+}
+
+.back-to-top:hover { color: rgb(26, 195, 255); }
+
+/* ── screenplay layout ──────────────────────────────────────────────── */
+
+body.screenplay {
+    max-width: 7in;
+    line-height: 1.5;
+}
+
+body.screenplay h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+}
+
+.scene-heading {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.character {
+    margin-left: 42%;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.dialogue {
+    margin-left: 17%;
+    margin-right: 17%;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+}
+
+.character + .dialogue {
+    margin-top: 0;
+}
+
+.action {
+    margin-top: 0;
+    margin-bottom: 0.75em;
+}
+
+.section-label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: rgb(120, 120, 120);
+}
+
+body.screenplay hr.section-break {
+    margin: 2.5em 0 0.5em 0;
+}
+
+/* ── screenplay responsive: tablet ─────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .character {
+        margin-left: 35%;
+    }
+    .dialogue {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+/* ── screenplay responsive: mobile ─────────────────────────────────── */
+
+@media (max-width: 600px) {
+    body.screenplay {
+        max-width: 100%;
+    }
+    .character {
+        margin-left: 0;
+        font-weight: bold;
+    }
+    .dialogue {
+        margin-left: 1em;
+        margin-right: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body { color: rgb(204, 204, 204); background: rgb(26, 26, 26); }
+    h1 { color: rgb(224, 224, 224); }
+    h2 { color: rgb(224, 224, 224); }
+    h3 { color: rgb(224, 224, 224); }
+    blockquote { border-left-color: rgb(102, 102, 102); color: rgb(170, 170, 170); }
+    a { color: rgb(204, 204, 204); }
+    code, pre { background: rgb(40, 40, 40); }
+    hr { border-top-color: rgb(102, 102, 102); }
+    th, td { border-color: rgb(102, 102, 102); }
+    th { background: rgb(40, 40, 40); }
+    .title-block { border-bottom-color: rgb(102, 102, 102); }
+    .title-block .byline { color: rgb(170, 170, 170); }
+    #toc { border-bottom-color: rgb(102, 102, 102); }
+    #toc-heading { color: rgb(224, 224, 224); }
+    #toc a { color: rgb(204, 204, 204); }
+    .chapter { border-bottom-color: rgb(51, 51, 51); }
+    .back-to-top { color: rgb(102, 102, 102); }
+    .section-label { color: rgb(153, 153, 153); }
+}
+    </style>
+</head>
+<body>
+<div class="title-block">
+  <h1>Lorem Ipsum: A Study in Placeholder Text</h1>
+</div>
+<nav id="toc">
+  <h3 id="toc-heading">Contents</h3>
+  <ol>
+    <li><a href="#the-origins-of-lorem-ipsum">The Origins of Lorem Ipsum</a></li>
+    <li><a href="#medieval-typesetters">Medieval Typesetters</a></li>
+    <li><a href="#the-digital-age">The Digital Age</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav>
+<div class="chapter">
+<h2 id="the-origins-of-lorem-ipsum">The Origins of Lorem Ipsum</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <a href="#toc" class="back-to-top">Back to top</a>
+</div>
+<div class="chapter">
+<h2 id="medieval-typesetters">Medieval Typesetters</h2>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+  <a href="#toc" class="back-to-top">Back to top</a>
+</div>
+<div class="chapter">
+<h2 id="the-digital-age">The Digital Age</h2>
+<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+<p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+  <a href="#toc" class="back-to-top">Back to top</a>
+</div>
+<div class="chapter">
+<h2 id="conclusion">Conclusion</h2>
+<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus.</p>
+  <a href="#toc" class="back-to-top">Back to top</a>
+</div>
+</body>
+</html>
